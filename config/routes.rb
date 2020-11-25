@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :customers
   resources :products, only: %i[index show]
   root to: "products#index"
 
