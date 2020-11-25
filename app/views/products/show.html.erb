@@ -6,3 +6,5 @@
 <p><strong>SKU: </strong><%= @product.sku %></p>
 
 <h3><strong>Price: </strong><%= number_to_currency @product.price / 100 %></h3>
+
+<h3><strong>Category: </strong><%= link_to @product.category.name, @product.category %></h3>
