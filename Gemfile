@@ -50,5 +50,17 @@ group :test do
   gem 'webdrivers'
 end
 
+# Active Admin
+gem 'activeadmin'
+
+# Devise to handle authentication
+gem 'devise'
+
+# Faker
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+# Kaminari for Pagination
+gem 'kaminari'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
