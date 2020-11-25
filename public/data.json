@@ -1,0 +1,112 @@
+[
+  {
+    "id": 10,
+    "name": "139 CHERRY PROFILE DYE SUB THICK PBT PLASTIC KEYSET ENGLISH FONT",
+    "sku": "139/Key/Sin",
+    "description": "Compatible with Cherry MX switches and related clones, these keycaps are made of super-durable PBT plastic. They’re designed in Cherry profile for kinds of keyboards(such as XD64\\GH60\\RS96\\Tada68.......), and they’re finished with dye-sublimated legends. Total comes with max 140 keycaps (5 kits)",
+    "price": 1530,
+    "is_assembled": false,
+    "category_id": 3,
+    "created_at": "2020-11-17T05:29:49.662Z",
+    "updated_at": "2020-11-17T05:29:49.662Z"
+  },
+  {
+    "id": 9,
+    "name": "PUDDING PBT DOUBLESHOT KEYCAP OEM BACK LIGHT MECHANICAL KEYBOARDS MILK WHITE PINK BLACK GH60 POKER 87 TKL 104 108 ANSI ISO",
+    "sku": "108/Key/Dbl/",
+    "description": "Pudding PBT Keycap is a very magical doubleshot product which split pbt material with 2 different layers at sides. So it looks like pudding.",
+    "price": 3000,
+    "is_assembled": false,
+    "category_id": 3,
+    "created_at": "2020-11-17T05:28:47.897Z",
+    "updated_at": "2020-11-17T05:28:47.897Z"
+  },
+  {
+    "id": 8,
+    "name": "108-Key PBT Black Seamless Doubleshot Backlit Keycap Set",
+    "sku": "108/Key/Blk/Dbl",
+    "description": "Full 108-Key Doubleshot PBT Keycap Set\r\nCherry MX Stem Compatible\r\nOEM Profile",
+    "price": 3900,
+    "is_assembled": false,
+    "category_id": 3,
+    "created_at": "2020-11-17T05:26:51.650Z",
+    "updated_at": "2020-11-17T05:26:51.650Z"
+  },
+  {
+    "id": 7,
+    "name": "65% CNC ALUMINUM PLATE",
+    "sku": "65/Pla/Alu",
+    "description": "A 65% Aluminium keyboard plate.",
+    "price": 1800,
+    "is_assembled": false,
+    "category_id": 4,
+    "created_at": "2020-11-17T05:25:34.325Z",
+    "updated_at": "2020-11-17T05:25:34.325Z"
+  },
+  {
+    "id": 6,
+    "name": "BRASS 60% PLATE",
+    "sku": "60/Pla/Bra",
+    "description": "A 60% brushed brass plate.",
+    "price": 3990,
+    "is_assembled": false,
+    "category_id": 4,
+    "created_at": "2020-11-17T05:24:49.398Z",
+    "updated_at": "2020-11-17T05:24:49.398Z"
+  },
+  {
+    "id": 5,
+    "name": "60% Anodized Aluminum Keyboard Case - Black",
+    "sku": "60/Alu/Blk",
+    "description": "60% Mechanical Keyboard Case\r\nCNC Anodized Aluminum\r\nPolished Aluminum Removable Weight\r\nCompatible DZ60, Face W, GH60\r\nAvailable in Various Colors\r\nStandard 60% Standoff Layout",
+    "price": 8400,
+    "is_assembled": false,
+    "category_id": 2,
+    "created_at": "2020-11-17T05:23:13.939Z",
+    "updated_at": "2020-11-17T05:23:13.939Z"
+  },
+  {
+    "id": 4,
+    "name": "Cherry MX Brown",
+    "sku": "Che/Bro",
+    "description": "The Cherry MX Brown is one of the most popular switch types right now. Probably because the switch represents quite a nice hybrid between gaming and typing. The switch provides a tactile feedback, but does not generate a sound like the Cherry MX Blue. The switch allows fast key presses in games, making them ideal for MOBAs, MMOs, RTS and similar genres.\r\n\r\nAdditional, they are often used in environments, where the Cherry MX Blue switches are too loud, but fast typing is desired.",
+    "price": 1000,
+    "is_assembled": false,
+    "category_id": 1,
+    "created_at": "2020-11-17T05:21:14.456Z",
+    "updated_at": "2020-11-17T05:21:14.456Z"
+  },
+  {
+    "id": 3,
+    "name": "Cherry MX Blue",
+    "sku": "Che/Blu",
+    "description": "The Cherry MX Blue is the favored switch type of most typing enthusiasts. The Cherry MX Blue provides tactile feedback and a loud and clear click sound. These switches make sure, you recognize hitting the actuation point and therefore allow really fast typing.  It might take a bit of practice, to stop pressing the key when hitting the actuation point, but once mastered, you surely will be writing texts like a professional secretary. In addition, hearing the click sound is really satisfying. Writing on a normal keyboard feels kinda boring, once used to a keyboard with Cherry MX Blue switches.\r\n\r\nEven though the Cherry MX Blue switches are really good for typists, that doesn’t mean, they are bad for gamers. There are actually a lot of gaming keyboards using them, but they have to compete with a lot of other hybrid switches for their place.\r\n\r\nOne thing to keep in mind: Keyboards with Cherry MX Blue switches are usually quite loud, therefore the clicking sound can be annoying or distracting for co-workers or family members.",
+    "price": 1000,
+    "is_assembled": false,
+    "category_id": 1,
+    "created_at": "2020-11-17T05:20:37.286Z",
+    "updated_at": "2020-11-17T05:20:37.286Z"
+  },
+  {
+    "id": 2,
+    "name": "Cherry MX Red",
+    "sku": "Che/Red",
+    "description": "The Cherry MX Red switches are similar to the Cherry MX Black. They are linear switches without any feedback. The difference to the Cherry MX Black is the far less actuation force of 45 cN. As this enables a faster actuation, the Cherry MX Red are also mostly used in gaming keyboards.",
+    "price": 1000,
+    "is_assembled": false,
+    "category_id": 1,
+    "created_at": "2020-11-17T05:19:43.602Z",
+    "updated_at": "2020-11-17T05:19:43.602Z"
+  },
+  {
+    "id": 1,
+    "name": "Cherry MX Black Pack",
+    "sku": "Che/Blk",
+    "description": "The Cherry MX Black is the most popular linear switch. The switch does not provide any feedback when hitting the actuation point and it just generates noise when bottoming out. With 60 cN, the actuation force is quite high. As you get no feedback about the actuation, you probably bottom out every key press. Therefore, the likelihood of accidental presses might get reduced. On the other hand, it can be quite tiresome to traverse the entire switch every key press.\r\n\r\nAs a result, the Cherry MX Black switches are mostly used by gamers, especially for RTS and shooter games. Typists usually choose other switch types.",
+    "price": 1000,
+    "is_assembled": false,
+    "category_id": 1,
+    "created_at": "2020-11-17T05:19:03.925Z",
+    "updated_at": "2020-11-17T05:19:03.925Z"
+  }
+]
