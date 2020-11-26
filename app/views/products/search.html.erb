@@ -1,3 +1,4 @@
+<%= render partial: 'products/search_form' %>
 <% if params[:category]["category_id"] == "" %>
   <p>
     Found <%= pluralize(@products.size, 'result') %> for the search term "<%= params[:search_term]%>"
@@ -12,4 +13,4 @@
                        collection: @products,
                        locals: { show_link: true } %>
 </div>
-<%= paginate @products %>
+<%= paginate @products %>-

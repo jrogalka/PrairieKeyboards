@@ -12,15 +12,14 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <section class="section">
       <div class="container">
         <header>
           <h1 class="title is-1"><%= link_to "Prairie Keyboards", root_path %></h1>
           <p class="subtitle is-4">Canada's worst keyboard marketplace!</p>
         </header>
-        <%= render partial: 'products/search_form' %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
         <%= yield %>
       </div>
     </section>
