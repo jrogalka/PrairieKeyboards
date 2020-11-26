@@ -4,6 +4,7 @@
     <title>Prairie Keyboards</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -19,6 +20,7 @@
           <h1 class="title is-1"><%= link_to "Prairie Keyboards", root_path %></h1>
           <p class="subtitle is-4">Canada's worst keyboard marketplace!</p>
         </header>
+        <%= render partial: 'products/search' %>
         <%= yield %>
       </div>
     </section>
