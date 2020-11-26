@@ -1,7 +1,7 @@
 <p>
   Found <%= pluralize(@products.size, 'result') %> for the search term "<%= params[:search_term]%>"
 </p>
-<div class="columns is-multiline">
+<div class="search-results columns is-multiline">
   <%= render partial: 'products/product',
                        collection: @products,
                        locals: { show_link: true } %>
