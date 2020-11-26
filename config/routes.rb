@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :customers
   resources :categories, only: %i[index show]
   resources :products, only: %i[index show]
+  get "search", to: "products#search", as: "search"
+
   root to: "products#index"
 
   devise_for :admin_users, ActiveAdmin::Devise.config
