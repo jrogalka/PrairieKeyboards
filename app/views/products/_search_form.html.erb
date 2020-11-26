@@ -1,7 +1,10 @@
-<%= form_with(url: "/search", local: true, method: "get", class: "search-form") do %>
+<%= form_with(url: "/search", local: true, method: "get", class: "search-form", model: @category) do %>
   <div class="field has-addons">
     <div class="control">
       <%= text_field_tag(:search_term, nil, class: 'input', placeholder: 'Search Products by name:') %>
+    </div>
+    <div class="control select">
+      <%= collection_select(:category, :category_id, Category.all, :id, :name, include_blank: "All") %>
     </div>
     <div class="control">
       <%= submit_tag("Search", class: "button is-info") %>

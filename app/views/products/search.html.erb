@@ -1,6 +1,12 @@
-<p>
-  Found <%= pluralize(@products.size, 'result') %> for the search term "<%= params[:search_term]%>"
-</p>
+<% if params[:category]["category_id"] == "" %>
+  <p>
+    Found <%= pluralize(@products.size, 'result') %> for the search term "<%= params[:search_term]%>"
+  </p>
+<% else %>
+  <p>
+    Found <%= pluralize(@products.size, 'result') %> for the search term "<%= params[:search_term]%>" in <%= @categories.find(params[:category]["category_id"]).name %>
+  </p>
+<% end %>
 <div class="search-results columns is-multiline">
   <%= render partial: 'products/product',
                        collection: @products,
