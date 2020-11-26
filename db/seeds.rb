@@ -13,7 +13,7 @@ i = 0
 10.times do
   product = Product.new
   product.name = data[i]["name"]
-  product.sku = data[i]["sku"]
+  product.sku = Faker::Number.number(digits: 10)
   product.description = data[i]["description"]
   product.price = data[i]["price"]
   product.is_assembled = data[i]["is_assembled"]

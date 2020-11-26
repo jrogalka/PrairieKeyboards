@@ -1,3 +1,27 @@
-<div>
-  <p><%= link_to product.name, product %></p>
+<div class="column">
+  <div class="card">
+    <div class="card-content">
+      <% if show_link %>
+        <p class="title"><%= link_to product.name, product %></p>
+      <% else %>
+        <p class="title"><%= product.name %></p>
+      <% end %>
+      <p>Category: <%= link_to product.category.name, product.category %></p>
+    </div>
+    <footer class="card-footer">
+      <p class="card-footer-item">
+        SKU: <br><%= product.sku %>
+      </p>
+      <p class="card-footer-item">
+        Price: <br><%= number_to_currency product.price / 100 %>
+      </p>
+      <p class="card-footer-item">
+        <% if product.is_assembled %>
+          Assembled
+        <% else %>
+          Not Assembled
+        <% end %>
+      </p>
+    </footer>
+  </div>
 </div>
