@@ -15,8 +15,19 @@
     <section class="section">
       <div class="container">
         <header>
+        <div class="has-text-left">
           <h1 class="title is-1"><%= link_to "Prairie Keyboards", root_path %></h1>
           <p class="subtitle is-4">Canada's worst keyboard marketplace!</p>
+        </div>
+        <div class="has-text-right">
+          <% if customer_signed_in? %>
+            Logged in as <strong><%= current_customer.full_name %></strong>
+            <%= link_to("Sign Out", destroy_customer_session_path, method: :delete) %>
+          <% else %>
+            <%= link_to "Sign Up", "/customers/sign_up" %> |
+            <%= link_to "Log In", new_customer_session_path %>
+          <% end %>
+        </div>
         </header>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
