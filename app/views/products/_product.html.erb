@@ -23,5 +23,15 @@
         <% end %>
       </p>
     </footer>
+    <footer class="card-footer">
+      <div class="card-footer-item">
+        <%= form_with url: cart_index_path do %>
+          <%= label_tag 'quantity' %>
+          <%= number_field_tag('quantity', 1, class: 'quantity') %>
+          <%= hidden_field_tag(:id, product.id) %>
+          <%= button_tag 'Add to Cart', class: 'button is-success' %>
+        <% end %>
+      </div>
+    </footer>
   </div>
 </div>

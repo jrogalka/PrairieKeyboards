@@ -3,9 +3,14 @@ header {
 }
 
 form.search-form {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 div.search-results {
   margin-top: 1rem;
+}
+
+input.quantity {
+  width: 33%;
+  margin-top: 0.5rem;
 }

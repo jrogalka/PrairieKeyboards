@@ -15,11 +15,11 @@ class ApplicationController < ActionController::Base
 
   def initialize_session
     # Initialize shopping cart
-    session[:shopping_cart] ||= {}
+    session[:shopping_cart] ||= []
   end
 
   def cart
-    # Return a collection of product objects based on the products within the shopping cart
-    Product.find(session[:shopping_cart])
+    # Return an array of hashes containing products and their quantity
+    session[:shopping_cart]
   end
 end
