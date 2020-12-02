@@ -8,6 +8,7 @@ class CartController < ApplicationController
     id = params[:id].to_i
     quantity = params[:quantity].to_i
     new_item = { id: id, quantity: quantity }
+    product = Product.find(id)
 
     unless session[:shopping_cart].any? { |hash| hash["id"] == id }
       session[:shopping_cart] << new_item
@@ -24,6 +25,7 @@ class CartController < ApplicationController
     # Remove the specified item from the cart.
     id = params[:id].to_i
     session[:shopping_cart].delete(id)
+    product = Product.find(id)
 
     flash[:notice] = "#{product.name} removed from cart."
 
