@@ -9,14 +9,24 @@ class CartController < ApplicationController
     quantity = params[:quantity].to_i
     new_item = { id: id, quantity: quantity }
 
-    session[:shopping_cart] << new_item
+    unless session[:shopping_cart].any? { |hash| hash["id"] == id }
+      session[:shopping_cart] << new_item
+      flash[:notice] = "#{product.name} added to cart."
+    end
+
+    puts session[:shopping_cart]
 
     redirect_to root_path
   end
 
   # DELETE /cart/:id
   def destroy
-    # Remove params[:id] from cart
-    i = 0
+    # Remove the specified item from the cart.
+    id = params[:id].to_i
+    session[:shopping_cart].delete(id)
+
+    flash[:notice] = "#{product.name} removed from cart."
+
+    redirect_to root_path
   end
 end

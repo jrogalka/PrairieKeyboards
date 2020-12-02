@@ -25,11 +25,20 @@
     </footer>
     <footer class="card-footer">
       <div class="card-footer-item">
-        <%= form_with url: cart_index_path do %>
-          <%= label_tag 'quantity' %>
-          <%= number_field_tag('quantity', 1, class: 'quantity') %>
-          <%= hidden_field_tag(:id, product.id) %>
-          <%= button_tag 'Add to Cart', class: 'button is-success' %>
+        <% if cart.any? { |hash| hash["id"] == product.id } %>
+          <%= form_with url: cart_index_path do %>
+            <%= label_tag 'quantity' %>
+            <%= number_field_tag('quantity', 1, class: 'quantity', disabled: true) %>
+            <%= hidden_field_tag(:id, product.id) %>
+            <%= button_tag 'Add to Cart', class: 'button is-success', disabled: true %>
+          <% end %>
+        <% else %>
+          <%= form_with url: cart_index_path do %>
+            <%= label_tag 'quantity' %>
+            <%= number_field_tag('quantity', 1, class: 'quantity') %>
+            <%= hidden_field_tag(:id, product.id) %>
+            <%= button_tag 'Add to Cart', class: 'button is-success' %>
+          <% end %>
         <% end %>
       </div>
     </footer>
