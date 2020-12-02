@@ -21,6 +21,7 @@
         </div>
         <div class="has-text-right">
           <% if customer_signed_in? %>
+            <p><%= link_to 'View Cart', "/cart/show" %></p>
             Logged in as <strong><%= current_customer.full_name %></strong>
             <%= link_to("Sign Out", destroy_customer_session_path, method: :delete) %>
           <% else %>

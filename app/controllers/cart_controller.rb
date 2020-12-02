@@ -3,8 +3,6 @@ class CartController < ApplicationController
   # Data sent as form data, ends up in the params hash
   def create
     # Add params[:id] to cart
-    console
-
     id = params[:id].to_i
     quantity = params[:quantity].to_i
     new_item = { id: id, quantity: quantity }
@@ -14,8 +12,6 @@ class CartController < ApplicationController
       session[:shopping_cart] << new_item
       flash[:notice] = "#{product.name} added to cart."
     end
-
-    puts session[:shopping_cart]
 
     redirect_to root_path
   end
@@ -34,5 +30,15 @@ class CartController < ApplicationController
 
   def show
     @cart_contents = session[:shopping_cart]
+  end
+
+  def put
+    id = params[:id].to_i
+    quantity = params[:quantity].to_i
+
+    puts id
+    puts quantity
+
+    redirect_to "/cart/show"
   end
 end
