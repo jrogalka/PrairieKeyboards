@@ -24,11 +24,15 @@ class CartController < ApplicationController
   def destroy
     # Remove the specified item from the cart.
     id = params[:id].to_i
-    session[:shopping_cart].delete(id)
+    session[:shopping_cart].delete_if { |hash| hash["id"] == id }
     product = Product.find(id)
 
     flash[:notice] = "#{product.name} removed from cart."
 
-    redirect_to root_path
+    redirect_to "/cart/show"
+  end
+
+  def show
+    @cart_contents = session[:shopping_cart]
   end
 end

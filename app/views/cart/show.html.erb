@@ -1,0 +1,5 @@
+<% @cart_contents.each do |content| %>
+  <% product = Product.find(content["id"]) %>
+  <h1><%= link_to product.name, product %></h1>
+  <%= link_to 'Remove from cart',  cart_path(product), method: :delete %>
+<% end %>
