@@ -30,6 +30,7 @@ class CartController < ApplicationController
 
   def show
     @cart_contents = session[:shopping_cart]
+    add_breadcrumb "Cart", cart_path
   end
 
   def update

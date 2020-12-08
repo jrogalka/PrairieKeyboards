@@ -5,6 +5,8 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    add_breadcrumb @product.category.name, @product.category
+    add_breadcrumb @product.name, @product
   end
 
   def search

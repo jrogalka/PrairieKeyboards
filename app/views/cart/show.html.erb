@@ -1,13 +1,18 @@
-<% @cart_contents.each do |content| %>
-  <% product = Product.find(content["id"]) %>
-  <h1 class=" cart-product title is-3"><%= link_to product.name, product %></h1>
+<% if @cart_contents.count != 0 %>
+  <% @cart_contents.each do |content| %>
+    <% product = Product.find(content["id"]) %>
+    <h1 class=" cart-product title is-3"><%= link_to product.name, product %></h1>
 
-  <%= form_with url: cart_path(product), method: :put do %>
-    <%= label_tag 'quantity' %>
-    <%= number_field_tag('quantity', content["quantity"], class: 'quantity-cart') %>
-    <%= hidden_field_tag(:id, product.id) %>
-    <%= button_tag('Update Quantity', class: 'button is-success') %>
+    <%= form_with url: cart_path(product), method: :put do %>
+      <%= label_tag 'quantity' %>
+      <%= number_field_tag('quantity', content["quantity"], class: 'quantity-cart') %>
+      <%= hidden_field_tag(:id, product.id) %>
+      <%= button_tag('Update Quantity', class: 'button is-success') %>
+    <% end %>
+
+    <%= button_to 'Remove from cart',  cart_path(product), method: :delete, class: 'button is-danger' %>
   <% end %>
-
-  <%= button_to 'Remove from cart',  cart_path(product), method: :delete, class: 'button is-danger' %>
+<% else %>
+  <p class="title is-3">Your cart is empty!</h1>
+  <p class="title is-5">Look for <%= link_to "great products!", products_path %></h2>
 <% end %>

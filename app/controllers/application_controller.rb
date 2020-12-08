@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :initialize_session
   helper_method :cart
+  add_breadcrumb "Home", :root_path
 
   protected
 
