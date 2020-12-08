@@ -32,7 +32,7 @@ class CartController < ApplicationController
     @cart_contents = session[:shopping_cart]
   end
 
-  def put
+  def update
     id = params[:id].to_i
     quantity = params[:quantity].to_i
 

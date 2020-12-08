@@ -2,11 +2,12 @@
   <% product = Product.find(content["id"]) %>
   <h1 class=" cart-product title is-3"><%= link_to product.name, product %></h1>
 
-  <%= form_with url: cart_index_path do %>
+  <%= form_with url: cart_path(product), method: :put do %>
     <%= label_tag 'quantity' %>
     <%= number_field_tag('quantity', content["quantity"], class: 'quantity-cart') %>
     <%= hidden_field_tag(:id, product.id) %>
-    <%= button_to 'Update Quantity', cart_path(product), method: :update, class: 'button is-success' %>
-    <%= button_to 'Remove from cart',  cart_path(product), method: :delete, class: 'button is-danger' %>
+    <%= button_tag('Update Quantity', class: 'button is-success') %>
   <% end %>
+
+  <%= button_to 'Remove from cart',  cart_path(product), method: :delete, class: 'button is-danger' %>
 <% end %>
