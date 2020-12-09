@@ -15,7 +15,7 @@ class CartController < ApplicationController
 
   # DELETE /cart/:id
   def destroy
-    id = params[:id].to_i
+    id = params[:id]
     session[:shopping_cart].delete_if { |hash| hash["id"] == id }
     product = Product.find(id)
 
@@ -30,8 +30,8 @@ class CartController < ApplicationController
   end
 
   def update
-    id = params[:id].to_i
-    quantity = params[:quantity].to_i
+    id = params[:id]
+    quantity = params[:quantity]
     product = session[:shopping_cart].find { |p| p["id"] == id }
     product["quantity"] = quantity
     flash[:notice] = "#{Product.find(id).name} Quantity updated. (#{quantity})"
