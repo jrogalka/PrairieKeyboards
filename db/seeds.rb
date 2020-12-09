@@ -19,9 +19,7 @@ i = 0
   product.is_assembled = data[i]["is_assembled"]
   product.category = Category.find(data[i]["category_id"])
 
-  if product&.valid?
-    product.save
-  end
+  product.save if product&.valid?
 
   i += 1
 end
@@ -37,9 +35,7 @@ end
     price:        Faker::Number.between(from: 100, to: 3000),
     is_assembled: Faker::Boolean.boolean
   )
-  if product&.valid?
-    product.save
-  end
+  product.save if product&.valid?
 end
 
 # if Rails.env.development?

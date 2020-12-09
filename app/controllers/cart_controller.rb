@@ -1,7 +1,7 @@
 class CartController < ApplicationController
-before_action :get_params, only: [:create, :destroy, :update]
-
   def create
+    id = params[:id]
+    quantity = params[:quantity]
     new_item = { id: id, quantity: quantity }
     product = Product.find(id)
 
@@ -15,6 +15,7 @@ before_action :get_params, only: [:create, :destroy, :update]
 
   # DELETE /cart/:id
   def destroy
+    id = params[:id].to_i
     session[:shopping_cart].delete_if { |hash| hash["id"] == id }
     product = Product.find(id)
 
@@ -29,16 +30,12 @@ before_action :get_params, only: [:create, :destroy, :update]
   end
 
   def update
+    id = params[:id].to_i
+    quantity = params[:quantity].to_i
     product = session[:shopping_cart].find { |p| p["id"] == id }
     product["quantity"] = quantity
+    flash[:notice] = "#{Product.find(id).name} Quantity updated. (#{quantity})"
 
     redirect_to "/cart/show"
   end
-
-  private
-
-    def fetch_params
-      id = params[:id].to_i
-      quantity = params[:quantity].to_i
-    end
 end
