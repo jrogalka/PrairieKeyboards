@@ -36,9 +36,11 @@ class CartController < ApplicationController
   def update
     id = params[:id].to_i
     quantity = params[:quantity].to_i
+    puts session[:shopping_cart]
 
-    puts id
-    puts quantity
+    p = session[:shopping_cart].find {|p| p["id"] == id}
+    p["quantity"] = quantity
+
 
     redirect_to "/cart/show"
   end

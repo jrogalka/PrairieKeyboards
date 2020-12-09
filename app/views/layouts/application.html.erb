@@ -19,6 +19,19 @@
             <h1 class="title is-1"><%= link_to "Prairie Keyboards", root_path %></h1>
             <p class="subtitle is-4">Canada's worst keyboard marketplace!</p>
           </div>
+          <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div id="navbarBasicExample" class="navbar-menu">
+              <div class="navbar-start">
+                <a class="navbar-item" href="products#index">
+                  Products
+                </a>
+
+                <a class="navbar-item" href="categories#index">
+                  Categories
+                </a>
+              </div>
+            </div>
+          </nav>
           <div class="has-text-right">
             <% if customer_signed_in? %>
               <p><%= link_to 'View Cart', "/cart/show" %></p>
@@ -33,6 +46,7 @@
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
         <%= render_breadcrumbs %>
+        <%= debug cart %>
         <%= yield %>
       </div>
     </section>
