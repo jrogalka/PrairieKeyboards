@@ -1,10 +1,7 @@
 class CartController < ApplicationController
-  # POST /cart
-  # Data sent as form data, ends up in the params hash
+before_action :get_params, only: [:create, :destroy, :update]
+
   def create
-    # Add params[:id] to cart
-    id = params[:id].to_i
-    quantity = params[:quantity].to_i
     new_item = { id: id, quantity: quantity }
     product = Product.find(id)
 
@@ -18,8 +15,6 @@ class CartController < ApplicationController
 
   # DELETE /cart/:id
   def destroy
-    # Remove the specified item from the cart.
-    id = params[:id].to_i
     session[:shopping_cart].delete_if { |hash| hash["id"] == id }
     product = Product.find(id)
 
@@ -34,13 +29,16 @@ class CartController < ApplicationController
   end
 
   def update
-    id = params[:id].to_i
-    quantity = params[:quantity].to_i
-    puts session[:shopping_cart]
-
-    p = session[:shopping_cart].find { |p| p["id"] == id }
-    p["quantity"] = quantity
+    product = session[:shopping_cart].find { |p| p["id"] == id }
+    product["quantity"] = quantity
 
     redirect_to "/cart/show"
   end
+
+  private
+
+    def fetch_params
+      id = params[:id].to_i
+      quantity = params[:quantity].to_i
+    end
 end

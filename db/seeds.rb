@@ -20,10 +20,7 @@ i = 0
   product.category = Category.find(data[i]["category_id"])
 
   if product&.valid?
-    puts "Created #{product.name}"
     product.save
-  else
-    product.errors.each { |attr, msg| puts "#{attr} - #{msg}\n" }
   end
 
   i += 1
@@ -41,13 +38,11 @@ end
     is_assembled: Faker::Boolean.boolean
   )
   if product&.valid?
-    puts "Created #{product.name}"
     product.save
-  else
-    product.errors.each { |attr, msg| puts "#{attr} - #{msg}\n" }
   end
 end
 
 # if Rails.env.development?
-#   AdminUser.create!(email: "admin@example.com", password: "password", password_confirmation: "password")
+#   AdminUser.create!(email: "admin@example.com", password: "password",
+#                     password_confirmation: "password")
 # end
