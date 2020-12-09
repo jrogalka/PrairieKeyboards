@@ -38,9 +38,8 @@ class CartController < ApplicationController
     quantity = params[:quantity].to_i
     puts session[:shopping_cart]
 
-    p = session[:shopping_cart].find {|p| p["id"] == id}
+    p = session[:shopping_cart].find { |p| p["id"] == id }
     p["quantity"] = quantity
-
 
     redirect_to "/cart/show"
   end
